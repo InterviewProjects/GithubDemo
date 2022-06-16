@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="profile_radius">25dp</dimen>
+    <dimen name="profile_size">50dp</dimen>
+    <dimen name="separator_height">0.5dp</dimen>
+
+    <!-- margins and paddings -->
+    <dimen name="space_zero">0dp</dimen>
+    <dimen name="space_x_small">2dp</dimen>
+    <dimen name="space_small">4dp</dimen>
+    <dimen name="space_medium">8dp</dimen>
+    <dimen name="space_large">12dp</dimen>
+    <dimen name="space_x_large">16dp</dimen>
+    <dimen name="space_xx_large">20dp</dimen>
+    <dimen name="space_xxx_large">24dp</dimen>
+    <dimen name="space_xxxx_large">28dp</dimen>
+    <dimen name="space_xxxxx_large">32dp</dimen>
+
+    <!-- text-size -->
+    <dimen name="size_small">10sp</dimen>
+    <dimen name="size_medium">12sp</dimen>
+    <dimen name="size_large">16sp</dimen>
+    <dimen name="size_x_large">20sp</dimen>
+</resources>

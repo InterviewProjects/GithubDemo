@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/pr_profile_mcv"
+                android:layout_width="@dimen/space_zero"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/profile_radius"
+                android:layout_marginTop="@dimen/space_large"
+                android:layout_marginStart="@dimen/space_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/pr_profile_iv"
+                    android:layout_width="@dimen/profile_size"
+                    android:layout_height="@dimen/profile_size"
+                    tools:src="@android:drawable/btn_star"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pr_title_tv"
+                android:layout_width="@dimen/space_zero"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_large"
+                android:textColor="@color/black"
+                tools:text="Sawai/hp-source-android #9"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginStart="@dimen/space_small"
+                android:layout_marginEnd="@dimen/space_large"
+                app:layout_constraintStart_toEndOf="@id/pr_profile_mcv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/pr_profile_mcv"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pr_created_by_label_tv"
+                android:layout_width="@dimen/space_zero"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_large"
+                android:textColor="@color/grey_500"
+                android:text="@string/created_by"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/space_x_small"
+                app:layout_constraintStart_toStartOf="@id/pr_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/pr_title_tv"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pr_created_by_value_tv"
+                android:layout_width="@dimen/space_zero"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_large"
+                android:textColor="@color/grey_800"
+                tools:text="Decoder1324"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginStart="@dimen/space_small"
+                app:layout_constraintStart_toEndOf="@id/pr_created_by_label_tv"
+                app:layout_constraintEnd_toEndOf="@id/pr_title_tv"
+                app:layout_constraintTop_toTopOf="@id/pr_created_by_label_tv"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pr_create_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_medium"
+                android:textColor="@color/grey_500"
+                android:text="@string/created_at"
+                android:layout_marginTop="@dimen/space_medium"
+                app:layout_constraintStart_toStartOf="@id/pr_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/pr_created_by_label_tv"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pr_create_value_tv"
+                android:layout_width="@dimen/space_zero"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_medium"
+                android:textColor="@color/grey_800"
+                tools:text="22nd May 2022"
+                android:layout_marginStart="@dimen/space_small"
+                app:layout_constraintStart_toEndOf="@id/pr_create_label_tv"
+                app:layout_constraintEnd_toEndOf="@id/pr_title_tv"
+                app:layout_constraintTop_toTopOf="@id/pr_create_label_tv"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pr_close_label_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_medium"
+                android:textColor="@color/grey_500"
+                android:text="@string/closed_at"
+                android:layout_marginTop="@dimen/space_x_small"
+                app:layout_constraintStart_toStartOf="@id/pr_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/pr_create_label_tv"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pr_close_value_tv"
+                android:layout_width="@dimen/space_zero"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_medium"
+                android:textColor="@color/grey_800"
+                tools:text="25nd May 2022"
+                android:layout_marginStart="@dimen/space_small"
+                app:layout_constraintStart_toEndOf="@id/pr_close_label_tv"
+                app:layout_constraintEnd_toEndOf="@id/pr_title_tv"
+                app:layout_constraintTop_toTopOf="@id/pr_close_label_tv"/>
+
+            <View
+                android:id="@+id/separator_view"
+                android:layout_width="@dimen/space_zero"
+                android:layout_height="@dimen/separator_height"
+                android:layout_marginTop="@dimen/space_large"
+                android:background="@color/grey_300"
+                app:layout_constraintTop_toBottomOf="@id/pr_close_label_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
