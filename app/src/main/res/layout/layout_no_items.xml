@@ -6,47 +6,45 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/vm_rv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/retry_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_retry"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/retry_tv"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/no_items_tv"
+            android:id="@+id/retry_tv"
             android:layout_width="@dimen/space_zero"
             android:layout_height="wrap_content"
             android:textSize="@dimen/size_x_large"
             android:textColor="@color/black"
-            android:text="@string/no_items"
+            tools:text="something went wrong"
             android:gravity="center"
-            android:visibility="gone"
             android:layout_marginStart="@dimen/space_small"
             android:layout_marginEnd="@dimen/space_large"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/retry_iv"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <com.google.android.material.progressindicator.CircularProgressIndicator
-            android:id="@+id/progress"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/retry_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:indeterminate="true"
-            app:indicatorColor="?attr/colorPrimary"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/retry"
+            app:backgroundTint="@android:color/holo_red_light"
+            app:cornerRadius="@dimen/space_small"
+            android:padding="@dimen/space_large"
+            android:layout_marginTop="@dimen/space_x_large"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <include
-            android:id="@+id/layout_retry"
-            android:visibility="gone"
-            layout="@layout/layout_retry"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/retry_tv"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -12,6 +12,7 @@ object ApiConstants {
 
     object QueryParam {
         const val STATE = "state"
+        const val PAGE = "page"
     }
 
     object Constant {

@@ -3,4 +3,6 @@
     <string name="created_by">Created by:</string>
     <string name="created_at">Created At:</string>
     <string name="closed_at">Closed At:</string>
+    <string name="retry">Retry</string>
+    <string name="no_items">No items found</string>
 </resources>

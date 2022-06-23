@@ -4,17 +4,18 @@ import com.google.gson.internal.LinkedTreeMap
 import com.ht.githubdemo.utils.Ext.toGsonString
 import com.ht.githubdemo.utils.Ext.toObject
 import retrofit2.Response
+import javax.inject.Inject
 import kotlin.coroutines.cancellation.CancellationException
 
 /**
  * Created by ZOMATO on 15,June,2022
  */
 
-object NetworkController {
+class NetworkController @Inject constructor(val apiService: ApiService) {
     @Throws(CancellationException::class)
     suspend inline fun <reified T>doGet(api: String, queryMap: Map<String, Any> = HashMap()): ApiResponse<T> {
         val output = try {
-            val response = ApiClient.service.get<LinkedTreeMap<String, String>>(api, queryMap)
+            val response = apiService.get<LinkedTreeMap<String, String>>(api, queryMap)
             handleApiResponse(response, api)
         } catch (ex: Exception) {
             ApiResponse<T>(data = null, error = ApiError(msg = ex.message))
